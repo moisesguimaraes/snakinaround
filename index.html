@@ -1,19 +1,41 @@
 ---
 layout: default
 
+banner:
+  title: Bem vindo ao<br />Snakin' Around!
+  tagline: De tudo o que eu faço, um pouco =D
+  excerpt: >
+    Por muito tempo eu quis ter um blog. Mas só querer não leva a
+    gente a lugar nenhum, não é mesmo?<br />
+    Então resolvi juntar todas as idéias aqui, colar a bunda na
+    cadeira e finalmente escrever sobre coisas que fazem parte do
+    meu dia a dia.<br />
+    De quebra, vou aprendendo mais algumas coisas!
+
 features:
-- icon: fa-terminal
-  title: Programação
-  excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-- icon: fa-camera-retro
-  title: Fotografia
-  excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-- icon: fa-music
-  title: Música
-  excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-- icon: fa-gamepad
-  title: Jogos
-  excerpt: Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+- title: Programação
+  icon: fa-terminal
+  excerpt: >
+    Trabalhos/estudos. Meu caderno de anotações
+    e meio para compartilhar conhecimentos.
+
+- title: Fotografia
+  icon: fa-camera-retro
+  excerpt: >
+    Um pequeno recorte dos meus melhores cliques.
+    Paisagens, objetos, criaturinhas e tudo mais.
+
+- title: Música
+  icon: fa-music
+  excerpt: >
+    Videos, músicas, cifras e coisas do tipo.
+    Violão, gaitas, flautas, ukulele, escaleta, e outros.
+
+- title: Jogos
+  icon: fa-gamepad
+  excerpt: >
+    Card games, Board games, Video games, e etc. Principalmente
+    Magic: The Gathering e Pokémon TCG.
 
 posts:
 - image: /images/pic01.jpg
@@ -42,52 +64,35 @@ posts:
   url: "#"
 ---
 
-{% comment %}
-
-	Editorial by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
-
-	Name:
-
-		Home page
-
-	Description:
-
-		Your site's home page.
-
-{% endcomment %}
-
 <!-- Banner -->
-	<section id="banner">
-		<span class="image object">
-			<img src="{{ site.baseurl }}/images/ukulele.png" alt="" />
-		</span>
-		<div class="content">
-			<header>
-				<h1>Hi, I’m Editorial<br />
-				by Pixelarity</h1>
-				<p>A urna sed morbi natoque enim cubilia</p>
-			</header>
-			<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
-			<ul class="actions">
-				<li><a href="#" class="button big">Learn More</a></li>
-			</ul>
-		</div>
-	</section>
+  <section id="banner">
+    <div class="content">
+      <header>
+        <h1>{{ page.banner.title }}</h1>
+        <p>{{ page.banner.tagline }}</p>
+      </header>
+      <p>{{ page.banner.excerpt }}</p>
+      <ul class="actions">
+        <li><a href="{{ site.baseurl }}/blog" class="button big">Acesse o blog o/</a></li>
+      </ul>
+    </div>
+    <span class="image object">
+      <img src="{{ site.baseurl }}/images/ukulele.png" alt="" />
+    </span>
+  </section>
 
 <!-- Section -->
-	<section>
-		<header class="major">
-			<h2>Categorias</h2>
-		</header>
-		{% include components/features.html features=page.features %}
-	</section>
+  <section>
+    <header class="major">
+      <h2>Categorias</h2>
+    </header>
+    {% include components/features.html features=page.features %}
+  </section>
 
 <!-- Section -->
-	<section>
-		<header class="major">
-			<h2>Últimas publicações</h2>
-		</header>
-		{% include components/posts.html posts=page.posts %}
-	</section>
+  <section>
+    <header class="major">
+      <h2>Últimas publicações</h2>
+    </header>
+    {% include components/posts.html posts=page.posts %}
+  </section>

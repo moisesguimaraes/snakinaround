@@ -85,15 +85,7 @@ posts:
   </section>
 
 <!-- Section -->
-  <section>
-    <header class="major">
-      <h2>Categorias</h2>
-    </header>
-    {% include components/features.html features=page.features %}
-  </section>
-
-<!-- Section -->
-  <section>
+<section>
     <header class="major">
       <h2>Últimas publicações</h2>
     </header>
@@ -103,15 +95,20 @@ posts:
         {% for post in site.posts limit:10 %}
 
           <article>
-            <a href="{{ post.url }}" class="image"><img src="{{ post.image }}" alt="" /></a>
-            <h3>{{ post.title }}</h3>
+            <a href="{{ site.baseurl }}{{ post.url }}" class="image"><img src="{{ site.baseurl }}{{ post.image }}" alt="" /></a>
+            <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
             <p>{{ post.excerpt | remove: "<p>" | remove: "</p>" }}</p>
-            <ul class="actions">
-              <li><a href="{{ post.url }}" class="button">More</a></li>
-            </ul>
           </article>
 
         {% endfor %}
 
       </div>
+  </section>
+
+<!-- Section -->
+  <section>
+    <header class="major">
+      <h2>Categorias</h2>
+    </header>
+    {% include components/features.html features=page.features %}
   </section>

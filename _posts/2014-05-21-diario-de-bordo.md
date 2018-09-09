@@ -3,6 +3,7 @@ layout: post
 title: "Diário de bordo #1"
 image: /images/job.png
 date: 2014-05-21 21:15:11 -0300
+comments: true
 ---
 
 Em Fevereiro de 2013 tive minha primeira mudança de emprego. Deixei o cargo de desenvolvedor de software na Phoebus Tecnologia para me tornar professor do Instituto Federal da Paraíba e engenheiro de software na wolfSSL.
